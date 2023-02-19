@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./views/Home";
 
 function App() {
+
+  let appContrast = ['light', 'dark'];
+  
+  if (localStorage.getItem('color-mode') == null && !appContrast.includes(localStorage.getItem('color-mode'))) {
+      localStorage.setItem('color-mode','dark');
+  } 
+
+  let appCurrentContrast = localStorage.getItem('color-mode') == 'dark' ? 'black' : 'white';
+  document.getElementsByTagName('body')[0].style.backgroundColor = appCurrentContrast;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Home />
     </div>
   );
 }

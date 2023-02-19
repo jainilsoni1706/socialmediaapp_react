@@ -1,0 +1,33 @@
+.main-menu-glass-bar {
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub-main-menu-glass-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-main-menu-glass-bar img {
+    height: 30px;
+    width: 30px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.light {
+    background: rgba(0, 0, 0, 0.524);
+}
+
+.dark {
+    background: rgba(255, 255, 255, 0.17);
+}
